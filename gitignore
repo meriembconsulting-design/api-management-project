@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+venv/
+.venv
+
+# Docker
+*.log
+*.swp
+.dockerignore
+*.docker
+*.sqlite # Pour la base de données H2 de WSO2 si elle est dans un dossier local
+/wso2/data/ # Si vous avez un bind mount pour les données de WSO2 dans un dossier local
+
+# IDEs
+.idea/ # Pour IntelliJ/PyCharm
+.vscode/ # Pour VS Code
+*.sublime-project
+*.sublime-workspace
+
+# Autres
+.DS_Store # macOS
+Thumbs.db # Windows

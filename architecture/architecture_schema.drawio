@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.3.0">
+  <diagram name="Page-1" id="aTD2N-4TGbQtOfw2eSrx">
+    <mxGraphModel dx="1418" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="API consumer&lt;div&gt;(Application externe)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="240" x="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="API Gateway&lt;div&gt;(WSO2 API Manager)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-routing&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&amp;nbsp;&lt;/span&gt;&amp;nbsp;-security (OAuth2/ JWT)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;-rate limiting&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="400" x="214" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="client Service&lt;div&gt;(FastAPI -docker)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="220" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="order Service&lt;div&gt;(FastAPI-docker)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.833;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="300" />
+              <mxPoint x="290" y="300" />
+            </Array>
+            <mxPoint x="280" y="300" as="sourcePoint" />
+            <mxPoint x="289.96000000000004" y="411.98" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-10" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.325;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="mkNtrEaV7IKLdGWOYrDf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="519" y="300" />
+            </Array>
+            <mxPoint x="520" y="300" as="sourcePoint" />
+            <mxPoint x="520" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-12" edge="1" parent="1" source="mkNtrEaV7IKLdGWOYrDf-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.465;entryY=0.022;entryDx=0;entryDy=0;entryPerimeter=0;" target="mkNtrEaV7IKLdGWOYrDf-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="HTTPS / REST&lt;div&gt;OAuth2( client credentials)&lt;/div&gt;&lt;div&gt;JWT&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="390" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="REST /HTTP&amp;nbsp;&lt;div&gt;JWT propagé&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="514" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="mkNtrEaV7IKLdGWOYrDf-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="REST /HTTP&amp;nbsp;&lt;div&gt;JWT propagé&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="200" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

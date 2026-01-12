@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  client-service:
+    build: ./services/client-service
+    container_name: client-service
+    ports:
+      - "8000:8000"
+    networks:
+      - mynetwork
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"] # Assurez-vous que votre app Python a un endpoint /health
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  order-service:
+    build: ./services/order-service
+    container_name: order-service
+    ports:
+      - "8001:8000"
+    networks:
+      - mynetwork
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  wso2-apim:
+    image: wso2/wso2am:4.3.0
+    container_name: wso2-apim
+    ports:
+      - "9443:9443"
+      - "8280:8280"
+      - "8243:8243"
+    depends_on:
+      client-service:
+        condition: service_started # <-- Changer de 'service_healthy' à 'service_started'
+      order-service:
+        condition: service_started # <-- Changer de 'service_healthy' à 'service_started'
+    networks:
+      - mynetwork
+    volumes:
+      - wso2_apim_data:/home/wso2user/wso2am-4.3.0/repository/database 
+networks:
+  mynetwork:
+    driver: bridge
+volumes:
+  wso2_apim_data:
