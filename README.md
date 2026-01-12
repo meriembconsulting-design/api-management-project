@@ -70,17 +70,4 @@ v v
       "https://localhost:8243/orders/1.0.0/items"
     ```
 
-## Améliorations Futures (Idées pour discussion en entretien)
-*   Intégration d'une base de données externe pour WSO2 (ex: PostgreSQL).
-*   Mise en place de CI/CD pour le déploiement automatique.
-*   Ajout de politiques de Throttling et de Caching avancées dans WSO2.
-*   Déploiement sur une plateforme cloud (AWS ECS/Kubernetes).
-*   Implémentation de `scopes` OAuth2 pour un contrôle d'accès granulaire.
 
-## Compétences Démontrées pour un rôle de Consultant API WSO2
-Ce projet met en évidence ma capacité à :
-*   Concevoir et implémenter des architectures d'APIs sécurisées et scalables.
-*   Maîtriser WSO2 API Manager pour la gestion du cycle de vie des APIs, la sécurisation (OAuth2) et la publication.
-*   Utiliser Docker et Docker Compose pour la containerisation et l'orchestration de microservices.
-*   Résoudre des problèmes complexes d'intégration et de déploiement (troubleshooting).
-*   Comprendre et appliquer les meilleures pratiques en matière d'API Management.
